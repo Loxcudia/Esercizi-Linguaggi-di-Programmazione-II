@@ -6,8 +6,8 @@ public class Controller {
     {
         private String name;
         private boolean isOn;
-        private ArrayList<Function> incompatibleFunctions;
-        public Function(String nome)
+        private List<Function> incompatibleFunctions;
+        private Function(String nome)
         {
             this.name = nome;
             this.isOn = false;
@@ -25,7 +25,7 @@ public class Controller {
         {
             for(Function f : incompatibleFunctions)
             {
-                if(f.getIsOn() == true)
+                if(f.getIsOn())
                     f.turnOff();
             }
             this.isOn = true;
@@ -36,22 +36,8 @@ public class Controller {
         }
         public void setIncompatible(Function x)
         {
-            for(Function f : incompatibleFunctions)
-            {
-                if(f.getIsOn() == true)
-                    f.turnOff();
-            }
             incompatibleFunctions.add(x);
-        }
-        @Override
-        public boolean equals(Object o)
-        {
-            if (o == this)
-                return true;
-            if(!(o instanceof Function))
-                return false;
-            Function x = (Function) o;
-            return x.name == ((Function) o).name;
+            x.incompatibleFunctions.add(this);
         }
     }
 
@@ -75,7 +61,7 @@ public class Controller {
         System.out.println("Funzionalita' attive:");
         for (Function f: functions)
         {
-            if(f.isOn == true)
+            if(f.isOn)
                 System.out.println(f.name);
         }
     }
