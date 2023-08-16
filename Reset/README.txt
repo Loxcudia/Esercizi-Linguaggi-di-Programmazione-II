@@ -1,0 +1,2 @@
+Implementare un metodo, chiamato reset, che prende come argomento un oggetto ed imposta a zero tutti i suoi campi interi pubblici.
+Implementare un metodo che, dato un oggetto, parte dalla classe che rappresenta il tipo effettivo dell'oggetto e ne restituisce la superclasse più generale, escludendo Object (quindi, la penultima classe, prima di arrivare a Object)
