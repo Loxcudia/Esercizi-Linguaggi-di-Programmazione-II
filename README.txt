@@ -1,0 +1,1 @@
+Collezione di esercizi svolti proposti nei vari anni negli esami di Linguaggi di Programmazione II, Docente Marco Faella, Università degli studi di Napoli Federico II (facoltà di Informatica).
